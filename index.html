@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ReparIA | Diagnóstico inteligente para problemas del hogar</title>
+  <meta name="description" content="ReparIA ayuda a jefes de hogar a entender daños de plomería, electricidad, carpintería y reparaciones antes de contratar un técnico." />
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#2563eb',
+              600: '#1d4ed8',
+              700: '#1e40af',
+              900: '#172554'
+            },
+            accent: {
+              400: '#facc15',
+              500: '#eab308'
+            }
+          },
+          boxShadow: {
+            soft: '0 24px 70px rgba(15, 23, 42, 0.12)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .hero-pattern {
+      background-image:
+        radial-gradient(circle at 20% 20%, rgba(250, 204, 21, 0.22), transparent 28%),
+        radial-gradient(circle at 80% 10%, rgba(37, 99, 235, 0.22), transparent 26%),
+        linear-gradient(135deg, #f8fafc 0%, #eff6ff 45%, #ffffff 100%);
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 antialiased">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 border-b border-white/60 bg-white/85 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+      <a href="#inicio" class="flex items-center gap-3" aria-label="ReparIA inicio">
+        <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-600 text-lg font-black text-white shadow-lg shadow-blue-200">R</div>
+        <div>
+          <p class="text-xl font-black tracking-tight text-slate-950">Repar<span class="text-brand-600">IA</span></p>
+          <p class="text-xs font-medium text-slate-500">Diagnóstico inteligente del hogar</p>
+        </div>
+      </a>
+
+      <nav class="hidden items-center gap-8 text-sm font-semibold text-slate-600 md:flex">
+        <a href="#como-funciona" class="hover:text-brand-600">Cómo funciona</a>
+        <a href="#servicios" class="hover:text-brand-600">Servicios</a>
+        <a href="#beneficios" class="hover:text-brand-600">Beneficios</a>
+        <a href="#contacto" class="hover:text-brand-600">Contacto</a>
+      </nav>
+
+      <a href="#contacto" class="hidden rounded-full bg-brand-600 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-blue-200 transition hover:bg-brand-700 md:inline-flex">
+        Probar ReparIA
+      </a>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- Hero -->
+    <section class="hero-pattern relative overflow-hidden pt-32 lg:pt-36">
+      <div class="absolute inset-0 -z-10 opacity-70"></div>
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-20 pt-8 lg:grid-cols-2 lg:px-8 lg:pb-28">
+        <div>
+          <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-100 bg-white/80 px-4 py-2 text-sm font-bold text-brand-700 shadow-sm">
+            <span class="h-2 w-2 rounded-full bg-accent-500"></span>
+            Antes de llamar al técnico, entiende el problema
+          </div>
+
+          <h1 class="max-w-3xl text-4xl font-black leading-tight tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
+            Diagnóstico inicial con IA para daños del hogar.
+          </h1>
+
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+            ReparIA ayuda a jefes de hogar a identificar si necesitan un plomero, electricista, carpintero o técnico especializado, estimando la urgencia y preparando una descripción clara antes de contratar.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+            <a href="#contacto" class="inline-flex items-center justify-center rounded-full bg-brand-600 px-7 py-4 text-base font-extrabold text-white shadow-xl shadow-blue-200 transition hover:-translate-y-0.5 hover:bg-brand-700">
+              Solicitar demo
+            </a>
+            <a href="#como-funciona" class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-7 py-4 text-base font-extrabold text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-brand-200 hover:text-brand-700">
+              Ver cómo funciona
+            </a>
+          </div>
+
+          <div class="mt-10 grid grid-cols-3 gap-4 max-w-xl">
+            <div class="rounded-2xl bg-white/80 p-4 shadow-sm">
+              <p class="text-2xl font-black text-slate-950">3</p>
+              <p class="text-xs font-semibold text-slate-500">categorías iniciales</p>
+            </div>
+            <div class="rounded-2xl bg-white/80 p-4 shadow-sm">
+              <p class="text-2xl font-black text-slate-950">IA</p>
+              <p class="text-xs font-semibold text-slate-500">clasificación rápida</p>
+            </div>
+            <div class="rounded-2xl bg-white/80 p-4 shadow-sm">
+              <p class="text-2xl font-black text-slate-950">24/7</p>
+              <p class="text-xs font-semibold text-slate-500">orientación inicial</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -left-6 -top-6 h-28 w-28 rounded-full bg-accent-400/50 blur-2xl"></div>
+          <div class="absolute -bottom-8 -right-8 h-36 w-36 rounded-full bg-brand-500/30 blur-2xl"></div>
+
+          <div class="relative grid gap-4 rounded-[2rem] bg-white p-4 shadow-soft">
+            <img src="reparacion.png" alt="Técnico revisando una reparación de plomería en una cocina moderna" class="h-72 w-full rounded-[1.5rem] object-cover lg:h-80" />
+            <div class="grid grid-cols-3 gap-4">
+              <img src="plomeria.png" alt="Fuga de agua en baño" class="h-28 w-full rounded-2xl object-cover" />
+              <img src="electrica.png" alt="Reparación eléctrica en pared" class="h-28 w-full rounded-2xl object-cover" />
+              <img src="carpinteria.png" alt="Carpintero instalando repisa con nivel" class="h-28 w-full rounded-2xl object-cover" />
+            </div>
+
+            <div class="absolute bottom-8 left-8 max-w-xs rounded-2xl bg-slate-950/90 p-5 text-white shadow-xl backdrop-blur-md">
+              <p class="text-sm font-bold text-accent-400">Diagnóstico ReparIA</p>
+              <p class="mt-1 text-lg font-black">Urgencia media</p>
+              <p class="mt-1 text-sm text-slate-200">Probable fuga visible. Técnico recomendado: plomero con experiencia en grifería.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem section -->
+    <section class="bg-white py-20">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="text-sm font-black uppercase tracking-[0.22em] text-brand-600">El problema</p>
+          <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">Contratar un técnico sin entender el daño puede salir caro.</h2>
+          <p class="mt-5 text-lg leading-8 text-slate-600">
+            Muchos hogares enfrentan incertidumbre: no saben qué especialista llamar, si el daño es urgente, cuánto podría costar o qué preguntas hacer antes de contratar.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <article class="rounded-3xl border border-slate-100 bg-slate-50 p-7">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-100 text-2xl">🔍</div>
+            <h3 class="text-xl font-black">Falta de diagnóstico</h3>
+            <p class="mt-3 leading-7 text-slate-600">El usuario describe el problema de forma incompleta y termina llamando al técnico equivocado.</p>
+          </article>
+          <article class="rounded-3xl border border-slate-100 bg-slate-50 p-7">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-100 text-2xl">💸</div>
+            <h3 class="text-xl font-black">Miedo a cobros abusivos</h3>
+            <p class="mt-3 leading-7 text-slate-600">En una urgencia, el hogar queda vulnerable ante cotizaciones poco claras o trabajos innecesarios.</p>
+          </article>
+          <article class="rounded-3xl border border-slate-100 bg-slate-50 p-7">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-100 text-2xl">⏱️</div>
+            <h3 class="text-xl font-black">Pérdida de tiempo</h3>
+            <p class="mt-3 leading-7 text-slate-600">Explicar el daño una y otra vez por WhatsApp o teléfono retrasa la solución y genera frustración.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="como-funciona" class="bg-slate-50 py-20">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div>
+            <p class="text-sm font-black uppercase tracking-[0.22em] text-brand-600">Cómo funciona</p>
+            <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">Un flujo simple para validar el problema antes de construir una app completa.</h2>
+            <p class="mt-5 text-lg leading-8 text-slate-600">
+              El prototipo puede funcionar con un formulario web o chat. La IA clasifica el daño, estima la urgencia y genera una ficha clara que el usuario puede enviar al técnico.
+            </p>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="rounded-3xl bg-white p-6 shadow-sm">
+              <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 font-black text-white">1</span>
+              <h3 class="mt-5 text-lg font-black">Describe el problema</h3>
+              <p class="mt-2 text-slate-600">El usuario escribe qué ocurre y puede adjuntar una foto del daño.</p>
+            </div>
+            <div class="rounded-3xl bg-white p-6 shadow-sm">
+              <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 font-black text-white">2</span>
+              <h3 class="mt-5 text-lg font-black">La IA pregunta</h3>
+              <p class="mt-2 text-slate-600">El asistente aclara detalles: ubicación del daño, síntomas, riesgos y urgencia.</p>
+            </div>
+            <div class="rounded-3xl bg-white p-6 shadow-sm">
+              <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 font-black text-white">3</span>
+              <h3 class="mt-5 text-lg font-black">Recibe diagnóstico inicial</h3>
+              <p class="mt-2 text-slate-600">ReparIA indica categoría, posible causa, riesgo y técnico recomendado.</p>
+            </div>
+            <div class="rounded-3xl bg-white p-6 shadow-sm">
+              <span class="flex h-10 w-10 items-center justify-center rounded-full bg-brand-600 font-black text-white">4</span>
+              <h3 class="mt-5 text-lg font-black">Contrata mejor informado</h3>
+              <p class="mt-2 text-slate-600">El usuario recibe preguntas clave para evitar confusiones, abusos o garantías débiles.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="servicios" class="bg-white py-20">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="text-sm font-black uppercase tracking-[0.22em] text-brand-600">Categorías iniciales</p>
+          <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">Diseñado para los daños más comunes del hogar.</h2>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <article class="group overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
+            <img src="plomeria.png" alt="Problema de plomería en baño" class="h-56 w-full object-cover transition group-hover:scale-105" />
+            <div class="p-7">
+              <h3 class="text-xl font-black">Plomería</h3>
+              <p class="mt-3 leading-7 text-slate-600">Fugas, sanitarios, griferías, lavamanos, filtraciones y daños visibles de agua.</p>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
+            <img src="electrica.png" alt="Reparación eléctrica en el hogar" class="h-56 w-full object-cover transition group-hover:scale-105" />
+            <div class="p-7">
+              <h3 class="text-xl font-black">Electricidad</h3>
+              <p class="mt-3 leading-7 text-slate-600">Cortos, breakers, tomas, luces, riesgos eléctricos y fallas por zonas.</p>
+            </div>
+          </article>
+
+          <article class="group overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
+            <img src="carpinteria.png" alt="Carpintería en habitación" class="h-56 w-full object-cover transition group-hover:scale-105" />
+            <div class="p-7">
+              <h3 class="text-xl font-black">Carpintería</h3>
+              <p class="mt-3 leading-7 text-slate-600">Puertas, repisas, muebles, bisagras, instalaciones y ajustes básicos.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section id="beneficios" class="bg-slate-950 py-20 text-white">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div>
+            <p class="text-sm font-black uppercase tracking-[0.22em] text-accent-400">Propuesta de valor</p>
+            <h2 class="mt-3 text-3xl font-black tracking-tight sm:text-4xl">ReparIA no reemplaza al técnico. Te ayuda a contratarlo mejor.</h2>
+            <p class="mt-5 text-lg leading-8 text-slate-300">
+              La solución reduce la incertidumbre antes de la contratación, mejora la comunicación con el proveedor y ayuda a identificar señales de riesgo desde el primer contacto.
+            </p>
+          </div>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="rounded-3xl bg-white/10 p-6 ring-1 ring-white/10">
+              <h3 class="text-lg font-black">Técnico correcto</h3>
+              <p class="mt-2 text-slate-300">Sugiere si necesitas plomero, electricista, carpintero u otro especialista.</p>
+            </div>
+            <div class="rounded-3xl bg-white/10 p-6 ring-1 ring-white/10">
+              <h3 class="text-lg font-black">Urgencia estimada</h3>
+              <p class="mt-2 text-slate-300">Clasifica el caso como bajo, medio, alto o crítico.</p>
+            </div>
+            <div class="rounded-3xl bg-white/10 p-6 ring-1 ring-white/10">
+              <h3 class="text-lg font-black">Ficha del problema</h3>
+              <p class="mt-2 text-slate-300">Genera una descripción clara para enviar por WhatsApp o correo.</p>
+            </div>
+            <div class="rounded-3xl bg-white/10 p-6 ring-1 ring-white/10">
+              <h3 class="text-lg font-black">Contratación segura</h3>
+              <p class="mt-2 text-slate-300">Recomienda preguntas sobre precio, garantía, materiales y tiempos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prototype preview -->
+    <section class="bg-white py-20">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+          <div class="overflow-hidden rounded-[2rem] bg-slate-100 shadow-soft">
+            <img src="reparacion.png" alt="Técnico realizando reparación en cocina" class="h-[460px] w-full object-cover" />
+          </div>
+          <div>
+            <p class="text-sm font-black uppercase tracking-[0.22em] text-brand-600">MVP simple</p>
+            <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">Primero validamos el diagnóstico. Luego conectamos con técnicos.</h2>
+            <p class="mt-5 text-lg leading-8 text-slate-600">
+              Para la primera versión, ReparIA puede funcionar como una landing page con formulario. El objetivo es validar si el usuario siente más confianza al recibir una orientación inicial antes de contactar a un técnico.
+            </p>
+
+            <ul class="mt-8 space-y-4">
+              <li class="flex gap-3"><span class="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-600 text-xs font-black text-white">✓</span><span class="text-slate-700">Captura descripción del daño y datos de contacto.</span></li>
+              <li class="flex gap-3"><span class="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-600 text-xs font-black text-white">✓</span><span class="text-slate-700">Clasifica categoría y urgencia con IA.</span></li>
+              <li class="flex gap-3"><span class="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-600 text-xs font-black text-white">✓</span><span class="text-slate-700">Genera recomendaciones para contratar mejor informado.</span></li>
+              <li class="flex gap-3"><span class="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-600 text-xs font-black text-white">✓</span><span class="text-slate-700">Permite medir interés real del público objetivo.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact form -->
+    <section id="contacto" class="bg-slate-50 py-20">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div>
+            <p class="text-sm font-black uppercase tracking-[0.22em] text-brand-600">Contacto</p>
+            <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">¿Quieres validar ReparIA con usuarios reales?</h2>
+            <p class="mt-5 text-lg leading-8 text-slate-600">
+              Déjanos tus datos y cuéntanos qué tipo de problema del hogar quieres diagnosticar. Esta landing está lista para validar interés, recoger casos y contactar usuarios del target.
+            </p>
+
+            <div class="mt-8 rounded-3xl bg-white p-6 shadow-sm">
+              <p class="font-black text-slate-950">Correo de contacto</p>
+              <a href="mailto:hernando.mercado@gmail.com" class="mt-2 inline-block font-semibold text-brand-600 hover:text-brand-700">hernando.mercado@gmail.com</a>
+            </div>
+          </div>
+
+          <form action="https://formsubmit.co/hernando.mercado@gmail.com" method="POST" class="rounded-[2rem] bg-white p-6 shadow-soft sm:p-8">
+            <!-- FormSubmit settings -->
+            <input type="hidden" name="_subject" value="Nuevo contacto desde Landing ReparIA" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label for="nombre" class="mb-2 block text-sm font-bold text-slate-700">Nombre completo</label>
+                <input id="nombre" name="nombre" type="text" required placeholder="Ej: Daniel Restrepo" class="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-brand-500 focus:ring-4 focus:ring-brand-100" />
+              </div>
+
+              <div>
+                <label for="email" class="mb-2 block text-sm font-bold text-slate-700">Correo electrónico</label>
+                <input id="email" name="email" type="email" required placeholder="tu@email.com" class="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-brand-500 focus:ring-4 focus:ring-brand-100" />
+              </div>
+
+              <div>
+                <label for="telefono" class="mb-2 block text-sm font-bold text-slate-700">Teléfono / WhatsApp</label>
+                <input id="telefono" name="telefono" type="tel" placeholder="Ej: +57 300 000 0000" class="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-brand-500 focus:ring-4 focus:ring-brand-100" />
+              </div>
+
+              <div>
+                <label for="servicio" class="mb-2 block text-sm font-bold text-slate-700">Tipo de problema</label>
+                <select id="servicio" name="tipo_de_problema" required class="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-brand-500 focus:ring-4 focus:ring-brand-100">
+                  <option value="">Selecciona una opción</option>
+                  <option value="Plomería">Plomería</option>
+                  <option value="Electricidad">Electricidad</option>
+                  <option value="Carpintería / Ebanistería">Carpintería / Ebanistería</option>
+                  <option value="Electrodomésticos">Electrodomésticos</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="mt-5">
+              <label for="urgencia" class="mb-2 block text-sm font-bold text-slate-700">Nivel de urgencia percibido</label>
+              <select id="urgencia" name="urgencia" class="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-brand-500 focus:ring-4 focus:ring-brand-100">
+                <option value="No estoy seguro">No estoy seguro</option>
+                <option value="Baja">Baja: puede esperar</option>
+                <option value="Media">Media: necesito resolver pronto</option>
+                <option value="Alta">Alta: está afectando el hogar</option>
+                <option value="Crítica">Crítica: fuga activa, corto o riesgo</option>
+              </select>
+            </div>
+
+            <div class="mt-5">
+              <label for="mensaje" class="mb-2 block text-sm font-bold text-slate-700">Describe el problema</label>
+              <textarea id="mensaje" name="descripcion_del_problema" rows="5" required placeholder="Ej: Hay una fuga debajo del lavamanos desde ayer. El agua cae lentamente, pero ya está mojando el mueble." class="w-full resize-none rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-brand-500 focus:ring-4 focus:ring-brand-100"></textarea>
+            </div>
+
+            <div class="mt-5 rounded-2xl bg-brand-50 p-4 text-sm leading-6 text-slate-600">
+              Al enviar este formulario, recibirás una respuesta de contacto. En una versión futura, ReparIA generará automáticamente una ficha de diagnóstico inicial con IA.
+            </div>
+
+            <button type="submit" class="mt-6 w-full rounded-full bg-brand-600 px-7 py-4 text-base font-extrabold text-white shadow-xl shadow-blue-200 transition hover:-translate-y-0.5 hover:bg-brand-700">
+              Enviar solicitud
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 py-10 text-white">
+    <div class="mx-auto flex max-w-7xl flex-col gap-5 px-5 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left lg:px-8">
+      <div>
+        <p class="text-xl font-black">Repar<span class="text-accent-400">IA</span></p>
+        <p class="mt-1 text-sm text-slate-400">Diagnóstico inteligente antes de llamar al técnico.</p>
+      </div>
+      <p class="text-sm text-slate-400">© 2026 ReparIA. Prototipo para validación de idea.</p>
+    </div>
+  </footer>
+</body>
+</html>
